@@ -24,6 +24,28 @@ spec:
     - ReadWriteOnce
 
 ---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongodb-secret
+type: Opaque
+data:
+  username: YWRtaW4=
+  password: MTIz
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongo-express-secret
+type: Opaque
+data:
+  mduser: YWRtaW4=
+  mdpass: MTIz
+  meuser: YWRtaW4=
+  mepass: MTIz
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
